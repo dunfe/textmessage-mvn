@@ -45,8 +45,13 @@ Separate the output for each case with a blank line.
 Expectation of User interface:
  
 Message #1: FAILED TO SEND.
+
 Message #2: Jason I love you
+
 Message #3: Jsoan I lve you
+
 Message #4: FAILED TO SEND.
+
 Message #5: Jason you jerk
+
 
