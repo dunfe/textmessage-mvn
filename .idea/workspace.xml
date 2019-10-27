@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +51,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -104,6 +105,13 @@
       <workItem from="1571646094888" duration="251000" />
       <workItem from="1571670135654" duration="480000" />
       <workItem from="1571707037104" duration="427000" />
+      <workItem from="1571717189475" duration="252000" />
+      <workItem from="1571791122540" duration="38000" />
+      <workItem from="1571823259124" duration="838000" />
+      <workItem from="1571884847053" duration="219000" />
+      <workItem from="1571885084702" duration="1336000" />
+      <workItem from="1572062752871" duration="391000" />
+      <workItem from="1572065477567" duration="7387000" />
     </task>
     <servers />
   </component>
