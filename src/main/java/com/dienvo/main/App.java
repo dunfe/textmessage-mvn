@@ -11,7 +11,6 @@ import java.util.Locale;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -19,44 +18,53 @@ public class App {
 
     private static List<String> dict; //the words exist in message
     private static List<String> prohibited; //the words can't use
-    private static List<String> stringList; //file lines to list.
+    public static List<String> stringList; //file lines to list.
     private static List<Message> messageList = new ArrayList<>(); //list of message include time and message
 
     public static void main(String[] args) {
         String fileName = "textmsg.txt";
         readFile(fileName);
-        checkFile();
+        checkFile(stringList);
         for (int i = 0; i < messageList.size(); i++) {
             checkMessage(messageList.get(i), i);
         }
     }
 
-    public static void checkMessage(Message message, int i) {
-        //if time of message no need to check
-        if (checkTime(message)) {
-            System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage());
-        } else {
-            if (checkContent(message) && checkSpell(message) && checkProhibited(message)) {
-                System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage());
-            } else
-                System.out.println("Message #" + (i + 1) + ": FAILED TO SEND.");
-        }
+    //read file to a list of lines
+    public static void readFile(String fileName) { //A
+        if (fileName != null) { //B
+            try { //C
+                ClassLoader classLoader = ClassLoader.getSystemClassLoader(); //D
+                Path paths = Paths.get(classLoader.getResource(fileName).getFile()); //E
+                stringList = Files.readAllLines(paths); //F
+            } //G
+            catch (Exception e) { //H
+                throw new NullPointerException(); //I
+            } //K
+        } else throw new NullPointerException();//M
     }
 
-    public static void readFile(String fileName){
-        try {
-            ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-            Path paths = Paths.get(Objects.requireNonNull(classLoader.getResource(fileName)).getFile());
-            stringList = Files.readAllLines(paths);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+    public static void checkMessage(Message message, int i) { //A
+        //if time of message no need to check
+        if (checkTime(message.getTime())) { //B
+            System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //C
+        } else { //D
+            if (checkContent(message.getContent().getContentOfMessage())
+                    && checkSpell(message.getContent().getContentOfMessage())
+                    && checkProhibited(message.getContent().getContentOfMessage())) { //E
+                System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //F
+            } else {//G
+                System.out.println("Message #" + (i + 1) + ": FAILED TO SEND."); //H
+            } //I
+        } //J
     }
-    //read file
-    public static void checkFile() {
-        try {
+
+
+    //check file and take content
+    public static void checkFile(List<String> files) { //A
+        try { //B
             //read number of dictionary, prohibited and message
-            List<String> itemNumber = stringList.stream()
+            List<String> itemNumber = files.stream() //C
                     .filter(line -> line.matches("\\d+"))
                     .collect(Collectors.toList());
             //get number of item of list
@@ -65,17 +73,17 @@ public class App {
             int numberItemOfMessage = Integer.parseInt(itemNumber.get(2));
 
             //dictionary start from second line, limit by number of item dictionary
-            dict = stringList.stream()
+            dict = files.stream()
                     .skip(1)
                     .limit(numberItemOfDict)
                     .collect(Collectors.toList());
             //prohibited words start after sum of dictionary line and number of dict, prohibited words (2) limit by number of prohibited words
-            prohibited = stringList.stream()
+            prohibited = files.stream()
                     .skip(numberItemOfDict + 2)
                     .limit(numberItemOfProhibited)
                     .collect(Collectors.toList());
             //message start after dict and prohibited words. Increase by 2 (*2) because 2 line is one message.
-            List<String> message = stringList.stream()
+            List<String> message = files.stream()
                     .skip(numberItemOfDict + numberItemOfProhibited + 3)
                     .limit(numberItemOfMessage * 2)
                     .collect(Collectors.toList());
@@ -89,49 +97,61 @@ public class App {
                 Message mess = new Message(time, new Content(numberOfWords, contentOfMessage));
                 messageList.add(mess);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) { //D
+            e.printStackTrace(); //E
+        } //F
     }
 
     //check time of message
-    public static boolean checkTime(Message message) {
-        DateTimeFormatter df = DateTimeFormat.forPattern("hh:mm a").withLocale(Locale.US);
-        DateTime actual = df.parseLocalTime(message.getTime()).toDateTimeToday();
-        DateTime limit1 = df.parseLocalTime("12:59 AM").toDateTimeToday();
-        DateTime limit2 = df.parseLocalTime("6:59 AM").toDateTimeToday();
-        //return true of message don't need to check
-        //return false, so that message must check
-        return actual.isBefore(limit1) || actual.isAfter(limit2);
+    public static boolean checkTime(String time) { //A
+        try { //B
+            DateTimeFormatter df = DateTimeFormat.forPattern("hh:mm a").withLocale(Locale.US); //C
+            DateTime actual = df.parseLocalTime(time).toDateTimeToday();
+            DateTime limit1 = df.parseLocalTime("12:59 AM").toDateTimeToday();
+            DateTime limit2 = df.parseLocalTime("6:59 AM").toDateTimeToday();
+            //return true of message don't need to check
+            //return false, so that message must check
+            if (actual.isBefore(limit1)) { //D
+                return true; //E
+            } else if (actual.isAfter(limit2)) { //F
+                return true; //G
+            }// H
+        } catch (Exception e) { //I
+            e.printStackTrace(); //J
+        } //K
+        return false; //M
     }
 
     //check message contain "i love you"
-    public static boolean checkContent(Message message) {
+    public static boolean checkContent(String content) { //A
         return !Pattern.compile(Pattern.quote("i love you"),
-                Pattern.CASE_INSENSITIVE).matcher(message.getContent().getContentOfMessage()).find();
+                Pattern.CASE_INSENSITIVE).matcher(content).find(); //B
     }
 
     //check spell, if message have more than 3 words is misspelled return false
-    public static boolean checkSpell(Message message) {
-        String[] arr = message.getContent().getContentOfMessage().split(" ");
-        int count = 0;
-        String dictionary = String.join(" ", dict);
-        for (String s : arr) {
-            if (!Pattern.compile(Pattern.quote(s), Pattern.CASE_INSENSITIVE).matcher(dictionary).find()) {
-                count++;
-            }
-        }
-        return count < 3;
+    public static boolean checkSpell(String content) { //A
+        int count = 0; //B
+        if (content != null && !content.equals("")) { //C
+            String[] arr = content.split(" "); //D
+            String dictionary = String.join(" ", dict);
+            for (String s : arr) { //E
+                if (!Pattern.compile(Pattern.quote(s), Pattern.CASE_INSENSITIVE).matcher(dictionary).find()) { //F
+                    count++; //G
+                }// H
+            } // I
+        } else throw new IllegalArgumentException(); //J
+        return count < 3; //K
     }
 
     //check message contain prohibited words
-    public static boolean checkProhibited(Message message) {
-        String contentOfMessage = message.getContent().getContentOfMessage();
-        for (String s : prohibited) {
-            if (Pattern.compile(Pattern.quote(s), Pattern.CASE_INSENSITIVE).matcher(contentOfMessage).find()) {
-                return false;
-            }
-        }
-        return true;
+    public static boolean checkProhibited(String content) { //A
+        if (content != null && !content.equals("")) { //B
+            for (String s : prohibited) { //C
+                if (Pattern.compile(Pattern.quote(s), Pattern.CASE_INSENSITIVE).matcher(content).find()) { //D
+                    return false; //E
+                } //F
+            } // G
+        } else throw new IllegalArgumentException(); //H
+        return true; //I
     }
 }

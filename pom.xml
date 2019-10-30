@@ -24,6 +24,12 @@
             <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.5</version>
+            <type>maven-plugin</type>
+        </dependency>
     </dependencies>
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
