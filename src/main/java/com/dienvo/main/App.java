@@ -21,12 +21,16 @@ public class App {
     public static List<String> stringList; //file lines to list.
     private static List<Message> messageList = new ArrayList<>(); //list of message include time and message
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String fileName = "textmsg.txt";
         readFile(fileName);
         checkFile(stringList);
         for (int i = 0; i < messageList.size(); i++) {
-            checkMessage(messageList.get(i), i);
+            boolean time = checkTime(messageList.get(i).getTime());
+            boolean content = checkContent(messageList.get(i).getContent().getContentOfMessage());
+            boolean spell = checkSpell(messageList.get(i).getContent().getContentOfMessage());
+            boolean prohibit = checkProhibited(messageList.get(i).getContent().getContentOfMessage());
+            checkMessage(messageList.get(i), i, time, content, spell, prohibit);
         }
     }
 
@@ -44,24 +48,29 @@ public class App {
         } else throw new NullPointerException();//M
     }
 
-    public static void checkMessage(Message message, int i) { //A
+    public static boolean checkMessage(Message message, int i, boolean time, boolean content, boolean spell, boolean prohibit) throws NullPointerException { //A
         //if time of message no need to check
-        if (checkTime(message.getTime())) { //B
-            System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //C
-        } else { //D
-            if (checkContent(message.getContent().getContentOfMessage())
-                    && checkSpell(message.getContent().getContentOfMessage())
-                    && checkProhibited(message.getContent().getContentOfMessage())) { //E
-                System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //F
-            } else {//G
-                System.out.println("Message #" + (i + 1) + ": FAILED TO SEND."); //H
-            } //I
-        } //J
+        try {
+            if (time) { //B
+                System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //C
+                return  true;
+            } else { //D
+                if (content && spell && prohibit) { //E
+                    System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //F
+                    return true;
+                } else {//G
+                    System.out.println("Message #" + (i + 1) + ": FAILED TO SEND."); //H
+                    return false;
+                } //I
+            } //J
+        } catch (NullPointerException e) {
+            throw new NullPointerException();
+        }
     }
 
 
     //check file and take content
-    public static void checkFile(List<String> files) { //A
+    public static boolean checkFile(List<String> files) { //A
         try { //B
             //read number of dictionary, prohibited and message
             List<String> itemNumber = files.stream() //C
@@ -97,8 +106,10 @@ public class App {
                 Message mess = new Message(time, new Content(numberOfWords, contentOfMessage));
                 messageList.add(mess);
             }
+            return true;
         } catch (Exception e) { //D
             e.printStackTrace(); //E
+            return false;
         } //F
     }
 

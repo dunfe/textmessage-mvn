@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/ReadFileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +82,54 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReadFileTest">
+  <component name="RunManager" selected="JUnit.CheckMessageTest">
+    <configuration name="CheckMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dienvo.main" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckMessageTest.checkMessage_TC2_eq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dienvo.main" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
+      <option name="METHOD_NAME" value="checkMessage_TC2_eq" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckMessageTest.checkMessage_TC4_eq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dienvo.main" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
+      <option name="METHOD_NAME" value="checkMessage_TC4_eq" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReadFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
@@ -95,54 +141,6 @@
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
       <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadFileTest.readFile_throw_FileNotFoundException_for_invalid_fileName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="METHOD_NAME" value="readFile_throw_FileNotFoundException_for_invalid_fileName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadFileTest.readFile_throw_IllegalArgumentException_for_null_fileName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="METHOD_NAME" value="readFile_throw_IllegalArgumentException_for_null_fileName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadFileTest.readFile_throw_NullPointerException_for_TC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="METHOD_NAME" value="readFile_throw_NullPointerException_for_TC1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckMessageTest" />
+        <item itemvalue="JUnit.CheckMessageTest.checkMessage_TC2_eq" />
+        <item itemvalue="JUnit.CheckMessageTest.checkMessage_TC4_eq" />
         <item itemvalue="JUnit.ReadFileTest" />
         <item itemvalue="JUnit.ReadFileTest.readFile_throw_NullPointerException_for_TC3" />
-        <item itemvalue="JUnit.ReadFileTest.readFile_throw_NullPointerException_for_TC1" />
-        <item itemvalue="JUnit.ReadFileTest.readFile_throw_FileNotFoundException_for_invalid_fileName" />
-        <item itemvalue="JUnit.ReadFileTest.readFile_throw_IllegalArgumentException_for_null_fileName" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +197,8 @@
       <workItem from="1572328983914" duration="1582000" />
       <workItem from="1572398691401" duration="8229000" />
       <workItem from="1572418176272" duration="4851000" />
+      <workItem from="1572423413158" duration="1059000" />
+      <workItem from="1572530299932" duration="2899000" />
     </task>
     <servers />
   </component>
