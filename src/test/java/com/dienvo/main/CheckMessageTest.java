@@ -24,33 +24,21 @@ class CheckMessageTest {
     void checkMessage_TC2_eq() {
         Message message = new Message("12:00 AM", new Content("3", "I lov you"));
         int i = 0;
-        try {
-            assertTrue(App.checkMessage(message, i, true, true, true, true));
-        } catch (Exception e) {
-            assertThrows(NullPointerException.class, () -> App.checkMessage(message, i, true, true, true, true));
-        }
+        assertTrue(App.checkMessage(message, i, true, true, true, true));
     }
 
     @Test
     void checkMessage_TC3_eq() {
         Message message = new Message("12:00 AM", new Content("3", "I love you"));
         int i = 1;
-        try {
-            assertTrue(App.checkMessage(message, i, true, true, true, true));
-        } catch (Exception e) {
-            assertThrows(NullPointerException.class, () -> App.checkMessage(message, i, true, true, true, true));
-        }
+        assertTrue(App.checkMessage(message, i, true, true, true, true));
     }
 
     @Test
     void checkMessage_TC4_eq() {
         Message message = new Message("12:00 AM", new Content("3", "I love you"));
         int i = -11;
-        try {
-            assertTrue(App.checkMessage(message, i, true, true, true, true));
-        } catch (Exception e) {
-            assertThrows(NullPointerException.class, () -> App.checkMessage(message, i, true, true, true, true));
-        }
+        assertThrows(IllegalArgumentException.class, () -> App.checkMessage(message, i, true, true, true, true));
     }
 
     /*

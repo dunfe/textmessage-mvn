@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +79,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReadFileTest">
-    <configuration name="CheckFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CheckMessageTest">
+    <configuration name="CheckMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -94,13 +89,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckFileTest" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckFileTest.checkFile_for_TC1_sc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckMessageTest.checkMessage_TC4_eq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -109,24 +104,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckFileTest" />
-      <option name="METHOD_NAME" value="checkFile_for_TC1_sc" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckFileTest.checkFile_for_TC2_eq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckFileTest" />
-      <option name="METHOD_NAME" value="checkFile_for_TC2_eq" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
+      <option name="METHOD_NAME" value="checkMessage_TC4_eq" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,13 +142,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.dienvo.main in textmessage-mvn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dienvo.main" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckMessageTest" />
+        <item itemvalue="JUnit.CheckMessageTest.checkMessage_TC4_eq" />
+        <item itemvalue="JUnit.com.dienvo.main in textmessage-mvn" />
         <item itemvalue="JUnit.ReadFileTest" />
         <item itemvalue="JUnit.ReadFileTest.readFile_done_for_TC1_of_statement_coverage" />
-        <item itemvalue="JUnit.CheckFileTest" />
-        <item itemvalue="JUnit.CheckFileTest.checkFile_for_TC1_sc" />
-        <item itemvalue="JUnit.CheckFileTest.checkFile_for_TC2_eq" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +195,7 @@
       <workItem from="1572423413158" duration="1059000" />
       <workItem from="1572530299932" duration="6606000" />
       <workItem from="1572576166604" duration="153000" />
-      <workItem from="1572576339955" duration="6291000" />
+      <workItem from="1572576339955" duration="6541000" />
     </task>
     <servers />
   </component>
