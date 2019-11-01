@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +197,7 @@
       <workItem from="1572398691401" duration="8229000" />
       <workItem from="1572418176272" duration="4851000" />
       <workItem from="1572423413158" duration="1059000" />
-      <workItem from="1572530299932" duration="2899000" />
+      <workItem from="1572530299932" duration="4636000" />
     </task>
     <servers />
   </component>

@@ -44,7 +44,7 @@ class CheckMessageTest {
     @Test
     void checkMessage_TC4_eq() {
         Message message = new Message("12:00 AM", new Content("3", "I love you"));
-        int i = 1;
+        int i = -11;
         try {
             assertTrue(App.checkMessage(message, i, true, true, true, true));
         } catch (Exception e) {
