@@ -53,6 +53,7 @@ public class App {
     public static boolean checkMessage(Message message, int i, boolean time, boolean content, boolean spell, boolean prohibit) throws NullPointerException { //A
         //if time of message no need to check
         try {
+            if (i < 0) throw new IllegalArgumentException();
             if (time) { //B
                 System.out.println("Message #" + (i + 1) + ": " + message.getContent().getContentOfMessage()); //C
                 return  true;
@@ -109,9 +110,12 @@ public class App {
                 messageList.add(mess);
             }
             return true;
-        } catch (Exception e) { //D
-            e.printStackTrace(); //E
-            return false;
+        }
+        catch (IndexOutOfBoundsException e){
+            throw new IndexOutOfBoundsException();
+        }
+        catch (NullPointerException e) { //D
+            throw new NullPointerException(); //E
         } //F
     }
 

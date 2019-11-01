@@ -26,13 +26,13 @@ class CheckFileTest {
     @Test
     void checkFile_for_TC2_eq() {
         List<String> files = new ArrayList<>();
-        assertThrows(NullPointerException.class, ()-> App.checkFile(files));
+        assertThrows(IndexOutOfBoundsException.class, ()-> App.checkFile(files));
     }
 
     @Test
     void checkFile_for_TC3_eq() {
         List<String> files = App.readFile("textmsg.txt");
-        assertThrows(NullPointerException.class, ()-> App.checkFile(files));
+        assertTrue(App.checkFile(files));
     }
 
     /*
@@ -42,6 +42,8 @@ class CheckFileTest {
      * ******************************************************** *
      */
 
+    //not available
+
 
     /*
      * ******************************************************** *
@@ -50,6 +52,13 @@ class CheckFileTest {
      * ******************************************************** *
      */
 
+    //TC1: files is valid
+    @Test
+    void checkFile_for_TC1_sc() {
+        List<String> files = App.readFile("textmsg.txt");
+        assertTrue(App.checkFile(files));
+    }
+
 
     /*
      * ******************************************************** *
@@ -57,4 +66,24 @@ class CheckFileTest {
      * Using Decision  coverage                                 *
      * ******************************************************** *
      */
+    //TC1: files is valid
+    @Test
+    void checkFile_for_TC1_dc() {
+        List<String> files = App.readFile("textmsg.txt");
+        assertTrue(App.checkFile(files));
+    }
+
+    //TC2: files is valid
+    @Test
+    void checkFile_for_TC2_dc() {
+        List<String> files = null;
+        assertThrows(NullPointerException.class, ()-> App.checkFile(files));
+    }
+
+    //TC2: files is valid
+    @Test
+    void checkFile_for_TC3_dc() {
+        List<String> files = new ArrayList<>();
+        assertThrows(IndexOutOfBoundsException.class, ()-> App.checkFile(files));
+    }
 }

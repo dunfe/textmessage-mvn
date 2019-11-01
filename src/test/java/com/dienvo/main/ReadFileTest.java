@@ -42,7 +42,7 @@ class ReadFileTest {
     @Test
     void readFile_done_for_valid_fileName() {
         String fileName = "textmsg.txt";
-        App.readFile(fileName);
+        App.stringList = App.readFile(fileName);
         assertTrue(App.stringList.size() > 0);
     }
     /*
@@ -62,7 +62,7 @@ class ReadFileTest {
     @Test
     void readFile_done_for_TC2_of_boundary_values() {
         String fileName = "textmsg.txt";
-        App.readFile(fileName);
+        App.stringList = App.readFile(fileName);
         assertTrue(App.stringList.size() > 0);
     }
 
@@ -84,7 +84,7 @@ class ReadFileTest {
     @Test
     void readFile_done_for_TC1_of_statement_coverage() {
         String fileName = "textmsg.txt";
-        App.readFile(fileName);
+        App.stringList = App.readFile(fileName);
         assertTrue(App.stringList.size() > 0);
     }
 
@@ -106,7 +106,7 @@ class ReadFileTest {
     @Test
     void readFile_done_for_TC2_of_decision_covrage() {
         String fileName = "textmsg.txt";
-        App.readFile(fileName);
+        App.stringList = App.readFile(fileName);
         assertTrue(App.stringList.size() > 0);
     }
     //TC3: fileName = "#$%"
