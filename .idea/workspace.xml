@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/noface.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckFileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckProhibitedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckSpellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +42,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -56,7 +61,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -81,8 +86,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CheckMessageTest">
-    <configuration name="CheckMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CheckSpellTest">
+    <configuration name="CheckSpellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -91,13 +96,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckMessageTest.checkMessage_TC2_eq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckSpellTest.checkSpell_for_TC1_sc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
-      <option name="METHOD_NAME" value="checkMessage_TC2_eq" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
+      <option name="METHOD_NAME" value="checkSpell_for_TC1_sc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckMessageTest.checkMessage_TC4_eq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckSpellTest.checkSpell_for_TC2_dc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +127,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckMessageTest" />
-      <option name="METHOD_NAME" value="checkMessage_TC4_eq" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
+      <option name="METHOD_NAME" value="checkSpell_for_TC2_dc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckSpellTest.checkSpell_for_TC4_bv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -138,13 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
+      <option name="METHOD_NAME" value="checkSpell_for_TC4_bv" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadFileTest.readFile_throw_NullPointerException_for_TC3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckSpellTest.checkSpell_for_TC5_bv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -153,8 +159,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="METHOD_NAME" value="readFile_throw_NullPointerException_for_TC3" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
+      <option name="METHOD_NAME" value="checkSpell_for_TC5_bv" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CheckMessageTest" />
-        <item itemvalue="JUnit.CheckMessageTest.checkMessage_TC2_eq" />
-        <item itemvalue="JUnit.CheckMessageTest.checkMessage_TC4_eq" />
-        <item itemvalue="JUnit.ReadFileTest" />
-        <item itemvalue="JUnit.ReadFileTest.readFile_throw_NullPointerException_for_TC3" />
+        <item itemvalue="JUnit.CheckSpellTest" />
+        <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC2_dc" />
+        <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC1_sc" />
+        <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC5_bv" />
+        <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC4_bv" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +203,9 @@
       <workItem from="1572398691401" duration="8229000" />
       <workItem from="1572418176272" duration="4851000" />
       <workItem from="1572423413158" duration="1059000" />
-      <workItem from="1572530299932" duration="4636000" />
+      <workItem from="1572530299932" duration="6606000" />
+      <workItem from="1572576166604" duration="153000" />
+      <workItem from="1572576339955" duration="2086000" />
     </task>
     <servers />
   </component>

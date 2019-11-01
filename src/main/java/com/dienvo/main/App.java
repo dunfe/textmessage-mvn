@@ -16,14 +16,14 @@ import java.util.stream.Collectors;
 
 public class App {
 
-    private static List<String> dict; //the words exist in message
-    private static List<String> prohibited; //the words can't use
+    public static List<String> dict; //the words exist in message
+    public static List<String> prohibited; //the words can't use
     public static List<String> stringList; //file lines to list.
-    private static List<Message> messageList = new ArrayList<>(); //list of message include time and message
+    public static List<Message> messageList = new ArrayList<>(); //list of message include time and message
 
     public static void main(String[] args) throws Exception {
         String fileName = "textmsg.txt";
-        readFile(fileName);
+        stringList = readFile(fileName);
         checkFile(stringList);
         for (int i = 0; i < messageList.size(); i++) {
             boolean time = checkTime(messageList.get(i).getTime());
@@ -35,17 +35,19 @@ public class App {
     }
 
     //read file to a list of lines
-    public static void readFile(String fileName) { //A
+    public static List<String> readFile(String fileName) { //A
+        List<String> temp = new ArrayList<>();
         if (fileName != null) { //B
             try { //C
                 ClassLoader classLoader = ClassLoader.getSystemClassLoader(); //D
                 Path paths = Paths.get(classLoader.getResource(fileName).getFile()); //E
-                stringList = Files.readAllLines(paths); //F
+                temp = Files.readAllLines(paths); //F
             } //G
             catch (Exception e) { //H
                 throw new NullPointerException(); //I
             } //K
         } else throw new NullPointerException();//M
+        return temp;
     }
 
     public static boolean checkMessage(Message message, int i, boolean time, boolean content, boolean spell, boolean prohibit) throws NullPointerException { //A
