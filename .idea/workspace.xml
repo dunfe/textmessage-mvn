@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/noface.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckFileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckProhibitedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckSpellTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckContentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckTimeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckSpellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckSpellTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +86,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CheckSpellTest">
+  <component name="RunManager" selected="JUnit.CheckTimeTest">
+    <configuration name="CheckContentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dienvo.main" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckContentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CheckSpellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
@@ -134,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckSpellTest.checkSpell_for_TC4_bv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckTimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
         <pattern>
@@ -143,36 +158,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
-      <option name="METHOD_NAME" value="checkSpell_for_TC4_bv" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckSpellTest.checkSpell_for_TC5_bv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckSpellTest" />
-      <option name="METHOD_NAME" value="checkSpell_for_TC5_bv" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckTimeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckTimeTest" />
+        <item itemvalue="JUnit.CheckContentTest" />
         <item itemvalue="JUnit.CheckSpellTest" />
         <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC2_dc" />
         <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC1_sc" />
-        <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC5_bv" />
-        <item itemvalue="JUnit.CheckSpellTest.checkSpell_for_TC4_bv" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +203,7 @@
       <workItem from="1572423413158" duration="1059000" />
       <workItem from="1572530299932" duration="6606000" />
       <workItem from="1572576166604" duration="153000" />
-      <workItem from="1572576339955" duration="2086000" />
+      <workItem from="1572576339955" duration="4072000" />
     </task>
     <servers />
   </component>

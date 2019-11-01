@@ -4,150 +4,159 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CheckSpellTest {
+class CheckTimeTest {
 
     /*
      * ****************************************************************** *
-     * This part follow part 1.6A  document.                              *
+     * This part follow part 1.4A  document.                              *
      * Using equivalence partitioning technique                           *
      * ****************************************************************** *
      */
 
-    //TC1: content is null
+    //TC1: time is null
     @Test
-    void checkSpell_for_TC1_eq() {
-        String content = null;
+    void checkTime_for_TC1_eq() {
+        String time = null;
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()-> App.checkTime(time));
     }
 
-    //TC2: content is empty
+    //TC2: time is empty
 
     @Test
-    void checkSpell_for_TC2_eq() {
-        String content = "";
+    void checkTime_for_TC2_eq() {
+        String time = "";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()-> App.checkTime(time));
     }
 
-    //TC3: content include misspell words
+    //TC3: time = "as:dg 12”
     @Test
-    void checkSpell_for_TC3_eq() {
-        String content = "love";
+    void checkTime_for_TC3_eq() {
+        String time = "as:dg 12";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()->App.checkTime(time));
     }
 
 
     /*
      * ******************************************************** *
-     * This part follow part 1.6B in unit test document.        *
+     * This part follow part 1.4B in unit test document.        *
      * Using boundary value technique                           *
      * ******************************************************** *
      */
 
-    //TC1: content = null
+    //TC1: time = "12:58 AM"
     @Test
-    void checkSpell_for_TC1_bv() {
-        String content = null;
+    void checkTime_for_TC1_bv() {
+        String time = "12:58 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertTrue(App.checkTime(time));
     }
 
-    //TC2: content = "ahole"
+    //TC2: time = "12:59 AM"
 
     @Test
-    void checkSpell_for_TC2_bv() {
-        String content = "love";
+    void checkTime_for_TC2_bv() {
+        String time = "12:59 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertFalse(App.checkTime(time));
     }
 
-    //TC3: content = "lve lve"
+    //TC3: time = "1:00 AM"
     @Test
-    void checkSpell_for_TC3_bv() {
-        String content = "lve lve";
+    void checkTime_for_TC3_bv() {
+        String time = "1:00 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertFalse(App.checkTime(time));
     }
 
-    //TC4: content = "aaholee"
+    //TC4: time = "6:58 AM"
     @Test
-    void checkSpell_for_TC4_bv() {
-        String content = "lve lve lve";
+    void checkTime_for_TC4_bv() {
+        String time = "6:58 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertFalse(App.checkSpell(content));
+        assertFalse(App.checkTime(time));
     }
 
-    //TC5: content = "aaholee"
+    //TC5: time = "6:59 AM"
     @Test
-    void checkSpell_for_TC5_bv() {
-        String content = "lve lve lve lve";
+    void checkTime_for_TC5_bv() {
+        String time = "6:58 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertFalse(App.checkSpell(content));
+        assertFalse(App.checkTime(time));
+    }
+
+    //TC6: time = "7:00 AM"
+    @Test
+    void checkTime_for_TC6_bv() {
+        String time = "7:00 AM";
+        App.stringList = App.readFile("textmsg.txt");
+        App.checkFile(App.stringList);
+        assertTrue(App.checkTime(time));
     }
 
 
 
     /*
      * ******************************************************** *
-     * This part follow part 1.6C in unit test document.        *
+     * This part follow part 1.4C in unit test document.        *
      * Using Statement coverage                                 *
      * ******************************************************** *
      */
 
-    //TC1: content = "love"
+    //TC1: time = "12:00 AM"
 
     @Test
-    void checkSpell_for_TC1_sc() {
-        String content = "love";
+    void checkTime_for_TC1_sc() {
+        String time = "12:00 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertTrue(App.checkTime(time));
     }
 
 
     /*
      * ******************************************************** *
-     * This part follow part 1.6D in unit test document.        *
+     * This part follow part 1.4D in unit test document.        *
      * Using Decision  coverage                                 *
      * ******************************************************** *
      */
 
-    //TC1: content = "love"
+    //TC1: time = "12:00 AM"
 
     @Test
-    void checkSpell_for_TC1_dc() {
-        String content = "love";
+    void checkTime_for_TC1_dc() {
+        String time = "12:00 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertTrue(App.checkTime(time));
     }
 
-    //TC2: content = "lve lve lve"
+    //TC2: time = "1:00 AM"
 
     @Test
-    void checkSpell_for_TC2_dc() {
-        String content = "lve lve lve";
+    void checkTime_for_TC2_dc() {
+        String time = "1:00 AM";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertFalse(App.checkSpell(content));
+        assertFalse(App.checkTime(time));
     }
 
-    //TC3: content is null
+    //TC3: time is null
     @Test
-    void checkSpell_for_TC3_dc() {
-        String content = null;
+    void checkTime_for_TC3_dc() {
+        String time = null;
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()-> App.checkTime(time));
     }
 }

@@ -130,13 +130,13 @@ public class App {
                 return true; //G
             }// H
         } catch (Exception e) { //I
-            e.printStackTrace(); //J
+            throw new NullPointerException(); //J
         } //K
         return false; //M
     }
 
     //check message contain "i love you"
-    public static boolean checkContent(String content) { //A
+    public static boolean checkContent(String content) throws IllegalArgumentException { //A
         return !Pattern.compile(Pattern.quote("i love you"),
                 Pattern.CASE_INSENSITIVE).matcher(content).find(); //B
     }

@@ -4,120 +4,129 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CheckSpellTest {
+class CheckContentTest {
 
     /*
      * ****************************************************************** *
-     * This part follow part 1.6A  document.                              *
+     * This part follow part 1.5A  document.                              *
      * Using equivalence partitioning technique                           *
      * ****************************************************************** *
      */
 
     //TC1: content is null
     @Test
-    void checkSpell_for_TC1_eq() {
+    void checkContent_for_TC1_eq() {
         String content = null;
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()-> App.checkContent(content));
     }
 
     //TC2: content is empty
 
     @Test
-    void checkSpell_for_TC2_eq() {
+    void checkContent_for_TC2_eq() {
         String content = "";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertTrue(App.checkContent(content));
     }
 
-    //TC3: content include misspell words
+    //TC3: content include "i love you"
     @Test
-    void checkSpell_for_TC3_eq() {
-        String content = "love";
+    void checkContent_for_TC3_eq() {
+        String content = "i love you";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertFalse(App.checkContent(content));
+    }
+
+    //TC4: content is not include "i love you"
+    @Test
+    void checkContent_for_TC4_eq() {
+        String content = "i lov ou";
+        App.stringList = App.readFile("textmsg.txt");
+        App.checkFile(App.stringList);
+        assertTrue(App.checkContent(content));
     }
 
 
     /*
      * ******************************************************** *
-     * This part follow part 1.6B in unit test document.        *
+     * This part follow part 1.5B in unit test document.        *
      * Using boundary value technique                           *
      * ******************************************************** *
      */
 
     //TC1: content = null
     @Test
-    void checkSpell_for_TC1_bv() {
+    void checkContent_for_TC1_bv() {
         String content = null;
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()-> App.checkContent(content));
     }
 
-    //TC2: content = "ahole"
+    //TC2: content = "i love youu"
 
     @Test
-    void checkSpell_for_TC2_bv() {
-        String content = "love";
+    void checkContent_for_TC2_bv() {
+        String content = "i love youu";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertFalse(App.checkContent(content));
     }
 
-    //TC3: content = "lve lve"
+    //TC3: content = "i love you"
     @Test
-    void checkSpell_for_TC3_bv() {
-        String content = "lve lve";
+    void checkContent_for_TC3_bv() {
+        String content = "i love you";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertFalse(App.checkContent(content));
     }
 
-    //TC4: content = "aaholee"
+    //TC4: content = "i love yo"
     @Test
-    void checkSpell_for_TC4_bv() {
-        String content = "lve lve lve";
+    void checkContent_for_TC4_bv() {
+        String content = "i love yo";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertFalse(App.checkSpell(content));
+        assertTrue(App.checkContent(content));
     }
 
-    //TC5: content = "aaholee"
+    //TC5: content = ""
     @Test
-    void checkSpell_for_TC5_bv() {
-        String content = "lve lve lve lve";
+    void checkContent_for_TC5_bv() {
+        String content = "";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertFalse(App.checkSpell(content));
+        assertTrue(App.checkContent(content));
     }
 
 
 
     /*
      * ******************************************************** *
-     * This part follow part 1.6C in unit test document.        *
+     * This part follow part 1.5C in unit test document.        *
      * Using Statement coverage                                 *
      * ******************************************************** *
      */
 
-    //TC1: content = "love"
+    //TC1: content = "haha"
 
     @Test
-    void checkSpell_for_TC1_sc() {
-        String content = "love";
+    void checkContent_for_TC1_sc() {
+        String content = "haha";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertTrue(App.checkContent(content));
     }
 
 
     /*
      * ******************************************************** *
-     * This part follow part 1.6D in unit test document.        *
+     * This part follow part 1.5D in unit test document.        *
      * Using Decision  coverage                                 *
      * ******************************************************** *
      */
@@ -125,29 +134,29 @@ class CheckSpellTest {
     //TC1: content = "love"
 
     @Test
-    void checkSpell_for_TC1_dc() {
+    void checkContent_for_TC1_dc() {
         String content = "love";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertTrue(App.checkSpell(content));
+        assertTrue(App.checkContent(content));
     }
 
     //TC2: content = "lve lve lve"
 
     @Test
-    void checkSpell_for_TC2_dc() {
-        String content = "lve lve lve";
+    void checkContent_for_TC2_dc() {
+        String content = "i love you";
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertFalse(App.checkSpell(content));
+        assertFalse(App.checkContent(content));
     }
 
     //TC3: content is null
     @Test
-    void checkSpell_for_TC3_dc() {
+    void checkContent_for_TC3_dc() {
         String content = null;
         App.stringList = App.readFile("textmsg.txt");
         App.checkFile(App.stringList);
-        assertThrows(IllegalArgumentException.class, ()-> App.checkSpell(content));
+        assertThrows(NullPointerException.class, ()-> App.checkContent(content));
     }
 }
