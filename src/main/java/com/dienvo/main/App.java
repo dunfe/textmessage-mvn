@@ -16,10 +16,10 @@ import java.util.stream.Collectors;
 
 public class App {
 
-    public static List<String> dict; //the words exist in message
-    public static List<String> prohibited; //the words can't use
-    public static List<String> stringList; //file lines to list.
-    public static List<Message> messageList = new ArrayList<>(); //list of message include time and message
+    private static List<String> dict; //the words exist in message
+    private static List<String> prohibited; //the words can't use
+    static List<String> stringList; //file lines to list.
+    private static List<Message> messageList = new ArrayList<>(); //list of message include time and message
 
     public static void main(String[] args) throws Exception {
         String fileName = "textmsg.txt";
@@ -35,8 +35,8 @@ public class App {
     }
 
     //read file to a list of lines
-    public static List<String> readFile(String fileName) { //A
-        List<String> temp = new ArrayList<>();
+    static List<String> readFile(String fileName) { //A
+        List<String> temp;
         if (fileName != null) { //B
             try { //C
                 ClassLoader classLoader = ClassLoader.getSystemClassLoader(); //D
@@ -50,7 +50,7 @@ public class App {
         return temp;
     }
 
-    public static boolean checkMessage(Message message, int i, boolean time, boolean content, boolean spell, boolean prohibit) throws NullPointerException { //A
+    static boolean checkMessage(Message message, int i, boolean time, boolean content, boolean spell, boolean prohibit) throws NullPointerException { //A
         //if time of message no need to check
         try {
             if (i < 0) throw new IllegalArgumentException();
@@ -73,7 +73,7 @@ public class App {
 
 
     //check file and take content
-    public static boolean checkFile(List<String> files) { //A
+    static boolean checkFile(List<String> files) { //A
         try { //B
             //read number of dictionary, prohibited and message
             List<String> itemNumber = files.stream() //C
@@ -120,7 +120,7 @@ public class App {
     }
 
     //check time of message
-    public static boolean checkTime(String time) { //A
+    static boolean checkTime(String time) { //A
         try { //B
             DateTimeFormatter df = DateTimeFormat.forPattern("hh:mm a").withLocale(Locale.US); //C
             DateTime actual = df.parseLocalTime(time).toDateTimeToday();
@@ -140,13 +140,13 @@ public class App {
     }
 
     //check message contain "i love you"
-    public static boolean checkContent(String content) throws IllegalArgumentException { //A
+    static boolean checkContent(String content) throws IllegalArgumentException { //A
         return !Pattern.compile(Pattern.quote("i love you"),
                 Pattern.CASE_INSENSITIVE).matcher(content).find(); //B
     }
 
     //check spell, if message have more than 3 words is misspelled return false
-    public static boolean checkSpell(String content) { //A
+    static boolean checkSpell(String content) { //A
         int count = 0; //B
         if (content != null && !content.equals("")) { //C
             String[] arr = content.split(" "); //D
@@ -161,7 +161,7 @@ public class App {
     }
 
     //check message contain prohibited words
-    public static boolean checkProhibited(String content) { //A
+    static boolean checkProhibited(String content) { //A
         if (content != null && !content.equals("")) { //B
             for (String s : prohibited) { //C
                 if (Pattern.compile(Pattern.quote(s), Pattern.CASE_INSENSITIVE).matcher(content).find()) { //D

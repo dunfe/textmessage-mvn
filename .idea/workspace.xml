@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import" />
+    <list default="true" id="8f6a24e5-0223-404c-9ff5-bf70c049a82d" name="Default Changelist" comment="optimize import">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dienvo/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/textmessage-mvn.kotlin_module" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CheckMessageTest">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.App" />
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckFileTest.checkFile_for_TC2_dc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="textmessage-mvn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dienvo.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dienvo.main" />
+      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.CheckFileTest" />
+      <option name="METHOD_NAME" value="checkFile_for_TC2_dc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CheckMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
@@ -111,37 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadFileTest.readFile_done_for_TC1_of_statement_coverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="textmessage-mvn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dienvo.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dienvo.main" />
-      <option name="MAIN_CLASS_NAME" value="com.dienvo.main.ReadFileTest" />
-      <option name="METHOD_NAME" value="readFile_done_for_TC1_of_statement_coverage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="com.dienvo.main in textmessage-mvn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="textmessage-mvn" />
       <extension name="coverage">
@@ -158,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.com.dienvo.main in textmessage-mvn" />
+        <item itemvalue="JUnit.CheckFileTest.checkFile_for_TC2_dc" />
         <item itemvalue="JUnit.CheckMessageTest" />
         <item itemvalue="JUnit.CheckMessageTest.checkMessage_TC4_eq" />
-        <item itemvalue="JUnit.com.dienvo.main in textmessage-mvn" />
-        <item itemvalue="JUnit.ReadFileTest" />
-        <item itemvalue="JUnit.ReadFileTest.readFile_done_for_TC1_of_statement_coverage" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +198,14 @@
       <workItem from="1572423413158" duration="1059000" />
       <workItem from="1572530299932" duration="6606000" />
       <workItem from="1572576166604" duration="153000" />
-      <workItem from="1572576339955" duration="6541000" />
+      <workItem from="1572576339955" duration="7335000" />
+      <workItem from="1572585468598" duration="51000" />
+      <workItem from="1572597947792" duration="1482000" />
+      <workItem from="1572790990194" duration="64000" />
+      <workItem from="1572791092572" duration="920000" />
+      <workItem from="1572834615300" duration="513000" />
+      <workItem from="1573027990404" duration="1257000" />
+      <workItem from="1573032129232" duration="11000" />
     </task>
     <servers />
   </component>
@@ -224,16 +234,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/dienvo/main/CheckMessageTest.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
